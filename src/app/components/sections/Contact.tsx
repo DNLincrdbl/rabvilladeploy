@@ -28,10 +28,11 @@ const Contact = () => {
 
   return (
     <section id="contact-section" className="relative py-10 md:py-20">
-      <div className="w-full h-[300px] md:h-[600px] relative"> 
+      <div className="w-full h-[300px] md:h-[600px] relative overflow-hidden"> 
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2813.744132928535!2d14.762799776121391!3d44.75387098543244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4763c0575c523db7%3A0x91c8f09b7ee2b72f!2sBanjol%20617A%2C%2051280%2C%20Rab%2C%20Croatia!5e0!3m2!1sen!2shu!4v1709641285407!5m2!1sen!2shu"
-          className="w-full h-full border-0"
+          className="absolute inset-0 w-full h-full border-0"
+          style={{ filter: 'contrast(1.2) opacity(0.9)' }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
