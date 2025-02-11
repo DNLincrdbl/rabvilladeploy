@@ -1,17 +1,16 @@
 'use client';
+import React from 'react';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
-        setIsScrolled(true);
+        // setIsScrolled(true);
       } else {
-        setIsScrolled(false);
+        // setIsScrolled(false);
       }
     };
 

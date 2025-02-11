@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const stats = [
   { number: '10+', label: 'Év tapasztalat' },
@@ -40,18 +41,24 @@ const About = () => {
           
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl mb-16 lg:mb-0">
-              <img
+              <Image
                 src="/595179819.jpg"
                 alt="Szálloda külső"
                 className="w-full h-[500px] object-cover"
+                layout="responsive"
+                width={800}
+                height={500}
               />
             </div>
             
             <div className="absolute -bottom-10 -right-10 w-2/3 rounded-2xl overflow-hidden shadow-2xl hidden lg:block">
-              <img
+              <Image
                 src="/rablaki7813729.jpg"
                 alt="Szálloda belső"
                 className="w-full h-[300px] object-cover"
+                layout="responsive"
+                width={800}
+                height={300}
               />
             </div>
             

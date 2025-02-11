@@ -1,5 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -43,9 +44,12 @@ export default function Hero() {
               <div className="relative">
                 <div className="bg-white p-4 rounded-[2rem] shadow-xl">
                   <div className="overflow-hidden rounded-[1.5rem]">
-                    <img 
+                    <Image 
                       src="/rab-bg.jpg" 
                       alt="Luxury Villa" 
+                      layout="responsive" 
+                      width={800} 
+                      height={600} 
                       className="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-700"
                     />
                   </div>

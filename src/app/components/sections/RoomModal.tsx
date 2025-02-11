@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface RoomModalProps {
@@ -15,16 +15,8 @@ interface RoomModalProps {
   onClose: () => void;
 }
 
-export default function RoomModal({ room, onClose }: RoomModalProps) {
+const RoomModal = ({ room, onClose }: RoomModalProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % room.images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + room.images.length) % room.images.length);
-  };
 
   return (
     <AnimatePresence>
@@ -132,4 +124,6 @@ export default function RoomModal({ room, onClose }: RoomModalProps) {
       </motion.div>
     </AnimatePresence>
   );
-}
+};
+
+export default RoomModal;

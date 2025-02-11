@@ -1,9 +1,20 @@
 'use client';
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import RoomModal from './RoomModal';
 
-const rooms = [
+interface Room {
+  id: number;
+  name: string;
+  shortDesc: string;
+  description: string;
+  price: string;
+  size: string;
+  capacity: string;
+  images: string[];
+  amenities: string[];
+}
+
+const rooms: Room[] = [
     {
       id: 1,
       name: 'Szoba kétszemélyes ággyal',
@@ -51,7 +62,7 @@ const rooms = [
 ];
 
 export default function Rooms() {
-  const [selectedRoom, setSelectedRoom] = useState(null);
+  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
 
   return (
     <section className="py-20 bg-gray-50">
